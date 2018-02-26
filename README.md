@@ -2,12 +2,12 @@
 阿里云短信 api 工具包，使用 go 实现
 
 ```
-go get github.com/xuruiray/aliyun-go-sms
+go get github.com/xuruiray/aliyun_go_sms
 ```
 
 ```
 package main
-import github.com/xuruiray/aliyun-go-sms
+import github.com/xuruiray/aliyun_go_sms
 
 func main(){
 
@@ -22,7 +22,7 @@ func main(){
     }
     
     // 调用短信接口发送短信
-    err := SendMessage(messageInfo)
+    err := aliyun_go_sms.SendMessage(messageInfo)
     if err != nil{
         //错误处理
     }
