@@ -12,7 +12,7 @@ import github.com/xuruiray/aliyun-go-sms
 func main(){
 
     // 填写相关信息
-    body := MessageBody{
+    messageInfo := MessageBody{
         AccessKeyID:     "AccessKeyID",
         AccessKeySecret: "AccessKeySecret",
         PhoneNumbers:    "PhoneNumber",
@@ -22,7 +22,7 @@ func main(){
     }
     
     // 调用短信接口发送短信
-    err := SendMessage(v.body)
+    err := SendMessage(messageInfo)
     if err != nil{
         //错误处理
     }
