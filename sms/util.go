@@ -6,7 +6,6 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"errors"
-	"fmt"
 	"io/ioutil"
 	"net/http"
 	"net/url"
@@ -59,7 +58,6 @@ func genSignature(accessKeySecret string, requestStr string) string {
 	accessKeySecret += "&"
 	stringToSign := urlEncode(requestStr)
 	stringToSign = "GET&%2F&" + stringToSign
-	fmt.Println(stringToSign)
 
 	//hmac ,use sha1
 	key := []byte(accessKeySecret)
@@ -78,6 +76,7 @@ func sendRequest(requestStr string, sign string) error {
 		return err
 	}
 
+	// 读取响应
 	defer resp.Body.Close()
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {

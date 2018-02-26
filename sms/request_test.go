@@ -6,12 +6,12 @@ import (
 )
 
 const (
-	realAccessKeyID     = "-"
-	realAccessKeySecret = "-"
-	realPhoneNumber     = "187xxxxxxx3"
-	realSignName        = "监控助手"
-	realTemplateCode    = "SMS_1xxxxxxx3"
-	realTemplateParam   = "{ \"alarmItem\":\"\", \"alarmSystem\":\"\", \"alarmTime\":\"\"}"
+	AccessKeyID     = "-"
+	AccessKeySecret = "-"
+	PhoneNumber     = "187xxxxxxx3"
+	SignName        = "监控助手"
+	TemplateCode    = "SMS_1xxxxxxx3"
+	TemplateParam   = "{ \"alarmItem\":\"\", \"alarmSystem\":\"\", \"alarmTime\":\"\"}"
 )
 
 func TestSendMessage(t *testing.T) {
@@ -24,12 +24,12 @@ func TestSendMessage(t *testing.T) {
 		{
 			name: "正常流程",
 			body: MessageBody{
-				AccessKeyID:     realAccessKeyID,
-				AccessKeySecret: realAccessKeySecret,
-				PhoneNumbers:    realPhoneNumber,
-				SignName:        realSignName,
-				TemplateCode:    realTemplateCode,
-				TemplateParam:   realTemplateParam,
+				AccessKeyID:     AccessKeyID,
+				AccessKeySecret: AccessKeySecret,
+				PhoneNumbers:    PhoneNumber,
+				SignName:        SignName,
+				TemplateCode:    TemplateCode,
+				TemplateParam:   TemplateParam,
 			},
 			wantErr: nil,
 		},
