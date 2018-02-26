@@ -1,4 +1,4 @@
-package aliyun_go_sms
+package sms
 
 // MessageBody 短信相关信息
 type MessageBody struct {
