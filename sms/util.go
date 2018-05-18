@@ -33,7 +33,7 @@ func packageParams(body MessageBody) (requestStr string) {
 	u.Set("RegionId", RegionId)
 	u.Set("SignName", body.SignName)
 	u.Set("SignatureMethod", SignatureMethod)
-	u.Set("SignatureNonce", strconv.Itoa(int(time.Now().Unix())))
+	u.Set("SignatureNonce", strconv.Itoa(int(time.Now().UnixNano())))
 	u.Set("SignatureVersion", SignatureVersion)
 	u.Set("TemplateCode", body.TemplateCode)
 	u.Set("TemplateParam", body.TemplateParam)
